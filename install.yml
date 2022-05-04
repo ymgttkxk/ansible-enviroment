@@ -1,0 +1,10 @@
+# USAGE:
+#  ansible-playbook -i inventory install.yml --ask-become-pass
+---
+- hosts: machine
+  gather_facts: false
+  roles:
+  - role: roles/enviroment
+  - role: roles/password
+  - role: roles/sshd
+

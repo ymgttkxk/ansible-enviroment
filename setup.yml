@@ -1,0 +1,8 @@
+# USAGE:
+#  ansible-playbook -i inventory setup.yml --ask-become-pass
+---
+- hosts: machine
+  gather_facts: false
+  roles:
+  - role: role/profile
+
